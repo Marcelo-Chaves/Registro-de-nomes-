@@ -2,7 +2,7 @@
 # include <stdlib.h> // biblioteca de alocacao de espaco em memoria 
 # include <locale.h> // biblioteca de alocacao de texto por regiao 
 # include <string.h> // biblioteca responsavel pela strings
-
+// --------------------------------------- inicio programacao voltar1-------------------
 void voltar() // chamando a funcao para uma novo registro 
 {
     char voltar_opcao;// variavel
@@ -30,8 +30,9 @@ void voltar() // chamando a funcao para uma novo registro
             printf("Opção inválida.\n");
             break;
     }
-    
-}    
+}
+// --------------------------------------- fim programacao voltar1-------------------
+// --------------------------------------- inicio programacao voltar2-------------------    
 void voltar2() // chamando a funcao para uma nova consulta
 {
     char voltar2_opcao; // criando uma variavel
@@ -64,6 +65,8 @@ void voltar2() // chamando a funcao para uma nova consulta
 
     system("pause"); // Aguardar que o usuário veja a mensagem
 } 
+// --------------------------------------- fim programacao voltar2-------------------
+// --------------------------------------- inicio programacao voltar3-------------------
 void voltar3() // chamando a funcao para uma nova consulta
 {
     char voltar3_opcao; // criando uma variavel
@@ -97,8 +100,8 @@ void voltar3() // chamando a funcao para uma nova consulta
     system("pause"); // Aguardar que o usuário veja a mensagem
 } 
 
-
-
+// --------------------------------------- fim programacao voltar3-------------------
+// --------------------------------------- inicio programacao cadastrar-------------------
 int registro() // funcao responsavel por cadastrar ususarios 
 {
 	printf("Voce escolheu registro de nomes! \n\n"); // escolha feita pelo usuario
@@ -162,7 +165,8 @@ int registro() // funcao responsavel por cadastrar ususarios
 	
 	printf("Cadastro realizado com sucesso\n\n");
 }
-
+// --------------------------------------- fim programacao cadastrar-------------------
+// --------------------------------------- inicio programacao consultar-------------------
 int consultar() // funcao responsavel por consultar ususarios 
 {
 		setlocale(LC_ALL, "PORTUGUESE"); //definindo a linguagem
@@ -195,6 +199,8 @@ int consultar() // funcao responsavel por consultar ususarios
 	
 	system("pause");// refere-se em dar tempo de leitura ao usuario 
 }
+// --------------------------------------- fim programacao consultar-------------------
+// --------------------------------------- inicio programacao deletar-------------------
 int deletar() // funcao responsavel por deletar ususarios 
 {
  	printf("Voce escolheu a opcao deletar nomes!\n\n"); // escolha feita pelo usuario
@@ -217,7 +223,8 @@ int deletar() // funcao responsavel por deletar ususarios
 	 	system("pause"); // refere-se em dar tempo de leitura ao usuario 
 	 }  
 }
-
+// --------------------------------------- fim programacao deletar-------------------
+// --------------------------------------- inicio programacao do menu-------------------
 int main()
 {
 	int opcao=0; // definido variaveis 
@@ -266,3 +273,4 @@ int main()
     }	
     
 }
+// --------------------------------------- fim programacao do menu-------------------
