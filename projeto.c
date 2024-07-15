@@ -229,48 +229,66 @@ int main()
 {
 	int opcao=0; // definido variaveis 
 	int laco=1;
+	char senhadigitada[10] = "a";
+	int comparacao;
 	
-	for(laco=1;laco=1;)
-	{
-		system("cls");// comando limpar tela
+	printf("Seja Bem vindo");
+	printf("Login de administradr \n\n Digite a sua senha \n");
+	scanf("%s",senhadigitada);
+	comparacao = strcmp(senhadigitada,"admin");
 	
-		setlocale(LC_ALL, "PORTUGUESE"); // definindo linguagem
 	
-		printf ("Registro de nomes \n\n"); // inicio do menu
-		printf ("Escolha a opçao desejada \n\n");
-		printf ("\t1 - Registrar nomes \n");
-		printf ("\t2 - Consultar nomes \n");
-		printf ("\t3 - Deletar nomes \n\n");
-		printf ("Escolha uma opcao: "); // fim do menu
-	
-		scanf("%d",&opcao);
-	
-		system("cls"); //comando para limpeza de tela
+	if (comparacao == 0)
+	{	
+		system("cls");
 		
-		switch(opcao)
+		for(laco=1;laco=1;)
 		{
-			case 1: 
-			registro(); // chamando a funcao registro  
-			voltar(); // chamando a funcao voltar 
-			break;// chamando a funcao parar
-			
-			case 2:
-			consultar(); // chamando a funcao consultar
-			voltar2(); // chamando a funcao para uma nova consulta
-			break;// chamando a funcao parar
-			
-			case 3:
-			deletar(); // chamando a funcao deletar
-			voltar3();// chamando a funcao voltar
-			break;// chamando a funcao parar
+			system("cls");// comando limpar tela
+	
+			setlocale(LC_ALL, "PORTUGUESE"); // definindo linguagem
+	
+			printf ("Registro de nomes \n\n"); // inicio do menu
+			printf ("Escolha a opçao desejada \n\n");
+			printf ("\t1 - Registrar nomes \n");
+			printf ("\t2 - Consultar nomes \n");
+			printf ("\t3 - Deletar nomes \n");
+			printf ("\t4 - Sair do sistema\n");
+			printf ("Escolha uma opcao: \n"); // fim do menu
+	
+			scanf("%d",&opcao);
+	
+			system("cls"); //comando para limpeza de tela
 		
-			default:
-			printf("Esta funcao nao esta disponivel \n\n");
-			system("pause");
-			break;	
+			switch(opcao)
+			{
+				case 1: 
+				registro(); // chamando a funcao registro  
+				voltar(); // chamando a funcao voltar 
+				break;// chamando a funcao parar
+			
+				case 2:
+				consultar(); // chamando a funcao consultar
+				voltar2(); // chamando a funcao para uma nova consulta
+				break;// chamando a funcao parar
+			
+				case 3:
+				deletar(); // chamando a funcao deletar
+				voltar3();// chamando a funcao voltar
+				break;// chamando a funcao parar
 				
-		}		
-    }	
-    
+				case 4: // Sair do programa
+        		printf("obrigado por utilizar nosso sistema");
+        		exit(0);
+		
+				default:
+				printf("Esta funcao nao esta disponivel \n\n");
+				system("pause");
+				break;	
+			}
+		}
+	}
+	else
+		printf("senha incorreta");					
 }
 // --------------------------------------- fim programacao do menu-------------------
